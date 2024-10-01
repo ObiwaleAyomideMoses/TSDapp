@@ -5,11 +5,10 @@
       "destination": "/"
     }
   ],
-  "builds": [
+  "routes": [
     {
-      "src": "server.js",
-      "use": "@vercel/node"
+      "src": "/(.*)",
+      "dest": "/api/server.js"
     }
-  ],
-  "buildCommand": "yarn run build"
+  ]
 }
