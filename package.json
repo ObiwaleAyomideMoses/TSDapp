@@ -1,0 +1,53 @@
+{
+  "name": "dappabstraction",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node server"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sirv": "^2.0.4",
+    "axios": "^1.7.7",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "crypto-js": "^4.2.0",
+    "ethereum-cryptography": "^2.2.1",
+    "jose": "^5.8.0",
+    "jwt-decode": "^4.0.0",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "react-router-dom": "^6.26.1",
+    "secrets.js-grempe": "^2.0.0",
+    "shamirs-secret-sharing": "^2.0.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-ssg": "^0.23.8",
+    "web3": "^4.12.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cpy": "^11.1.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "file-loader": "^6.2.0",
+    "tsup": "^8.2.4"
+  }
+}
