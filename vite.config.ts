@@ -31,4 +31,9 @@ export default defineConfig({
     // Optionally, specify the directory for the final build files
     outDir: 'dist',
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
 });
