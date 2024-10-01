@@ -1,8 +1,12 @@
 {
   "rewrites": [
     {
+      "source": "/:client_name/:exchange/:client_id",
+      "destination": "/server.js"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/server.js"
     }
   ],
   "builds": [{ "src": "server.js", "use": "@vercel/node" }]
