@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import express from 'express';
-
+import fetch from 'node-fetch';
 // Constants
 const isProduction = process.env.NODE_ENV === 'production';
 const port = process.env.PORT || 3000;
