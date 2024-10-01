@@ -12,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    ssr: true,
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
