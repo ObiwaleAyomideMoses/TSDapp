@@ -1,13 +1,17 @@
 {
   "rewrites": [
     {
-      "source": "/:client_name/:exchange/:client_id",
-      "destination": "/server.js"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/server.js"
+      "destination": "/"
     }
   ],
-  "builds": [{ "src": "/server.js", "use": "@vercel/node" }]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ]
 }
