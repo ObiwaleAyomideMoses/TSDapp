@@ -1,12 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/:client_name/:exchange/:client_id",
-      "destination": "/server.js"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/server.js"
+      "destination": "/"
     }
   ],
   "builds": [
@@ -14,5 +10,6 @@
       "src": "server.js",
       "use": "@vercel/node"
     }
-  ]
+  ],
+  "buildCommand": "yarn run build"
 }
