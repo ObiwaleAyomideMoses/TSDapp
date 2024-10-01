@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import TownesquareConnect from './components/Tsloginmodal/TsloginComponent';
-import { Route, Routes,  } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import StakingModal from './components/StakeLido/Staking';
 import SuccessModal from './components/successModal/successmodal';
 import TSLoginModalComponent from './components/Tsloginmodal/TSLoginModalComponent';
 import StETHWithdraw from './components/successModal/MainWithdraw';
 import InitialModal from './components/popup/initialpopup';
-function Router() {
+export const Router = () => {
   return (
     <div>
       <TownesquareConnect
@@ -54,6 +54,4 @@ function Router() {
       </TownesquareConnect>
     </div>
   );
-}
-
-export default Router;
+};
