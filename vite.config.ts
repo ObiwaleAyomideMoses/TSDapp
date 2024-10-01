@@ -12,14 +12,7 @@ export default defineConfig({
     },
   },
   build: {
-    
-    ssr: true,
     rollupOptions: {
-      input: {
-        // Specify the entry for client and SSR separately
-        main: path.resolve(__dirname, 'src/entry-client.tsx'), // Client entry
-        ssr: path.resolve(__dirname, 'src/entry-server.tsx'), // SSR entry
-      },
       output: {
         assetFileNames: (assetInfo) => {
           // Remove hash from all asset file names
@@ -31,10 +24,5 @@ export default defineConfig({
     },
     // Optionally, specify the directory for the final build files
     outDir: 'dist',
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
   },
 });
