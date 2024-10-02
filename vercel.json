@@ -6,7 +6,7 @@
     }
   ],
   "buildCommand": "vite build",
-  "devCommand": "node dist/server/server.js",
+  "devCommand": "node dist/server/entry-server.js",
   "rewrites": [
     { "source": "/:client_name/:exchange/:client_id", "destination": "/api" }
   ]
