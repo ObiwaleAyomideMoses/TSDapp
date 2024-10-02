@@ -19,7 +19,7 @@ export default defineConfig({
           // Remove hash from all asset file names
           return 'assets/[name][extname]';
         },
-        entryFileNames: 'assets/[name].js',
+        entryFileNames: '[name].js',
         chunkFileNames: 'assets/[name].js',
       },
     },
