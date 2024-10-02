@@ -12,6 +12,7 @@ export default defineConfig({
     },
   },
   build: {
+    ssr: 'src/entry-server.tsx',
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {

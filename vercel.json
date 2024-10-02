@@ -1,15 +1,12 @@
 {
+  "buildCommand": "npm run build:server",
+  "devCommand": "node dist/server/server.js",
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/:client_name/:exchange/:client_id", "destination": "/api" }
   ],
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/**"
     }
-  ],
-  "buildCommand": "vite build"
+  }
 }
