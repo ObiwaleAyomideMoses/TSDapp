@@ -1,3 +1,3 @@
-const server = import('../dist/server/server.js');
+const server = await import('../dist/server/server.js');
 
-module.exports = server.app;
+export default server.app;

@@ -8,6 +8,14 @@
   "buildCommand": "vite build",
   "devCommand": "node dist/server/server.js",
   "rewrites": [
-    { "source": "/:client_name/:exchange/:client_id", "destination": "/api" }
-  ]
+    {
+      "source": "/:client_name/:exchange/:client_id",
+      "destination": "/api/index.js"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/**"
+    }
+  }
 }
