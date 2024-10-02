@@ -1,3 +1,3 @@
-import server from '../dist/server/entry-server.js';
+import server from '../dist/server/server.js';
 
 export default server.app;
