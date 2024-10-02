@@ -1,3 +1,3 @@
-const server = import('../dist/server/server.js');
+import server from '../dist/server/entry-server.js';
 
-module.exports = server.app;
+export default server.app;
