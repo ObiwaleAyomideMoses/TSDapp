@@ -1,13 +1,9 @@
 {
+  "rewrites": [{ "source": "/(.*)", "destination": "/server.js" }],
   "builds": [
     {
-      "src": "api/index.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
-  ],
-  "buildCommand": "vite build",
-  "devCommand": "node dist/server/server.js",
-  "rewrites": [
-    { "source": "/:client_name/:exchange/:client_id", "destination": "/api" }
   ]
 }
